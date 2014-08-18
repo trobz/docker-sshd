@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NAME="ssh"
+NAME="trobz/sshd"
 DOCKER_TAG=${1:-14.04}
 
 echo "build image for $NAME:$DOCKER_TAG"
