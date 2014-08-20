@@ -31,9 +31,5 @@ COPY config/supervisor/sshd.conf /etc/supervisor/conf.d/sshd.conf
 
 EXPOSE 22
 
-ONBUILD RUN apt-get update
-ONBUILD RUN apt-get upgrade -y
-ONBUILD RUN updatedb
-
 ADD scripts/start/init/05_ssh.sh /usr/local/docker/start/init/05_ssh.sh
 
