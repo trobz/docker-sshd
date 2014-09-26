@@ -2,7 +2,7 @@
 # SSH server
 ############################################################
 
-FROM trobz/supervisord:12.04
+FROM trobz/supervisord:14.04
 
 MAINTAINER Michel Meyer <mmeyer@trobz.com>
 
@@ -18,6 +18,10 @@ RUN apt-get install -y \
 
 RUN chmod 0777 /var/run/screen
 
+# vim
+
+ADD config/vim/vim.tar.gz /tmp/setup
+
 # ssh
 
 RUN mkdir /var/run/sshd
@@ -32,4 +36,4 @@ COPY config/supervisor/sshd.conf /etc/supervisor/conf.d/sshd.conf
 EXPOSE 22
 
 ADD scripts/start/init/05_ssh.sh /usr/local/docker/start/init/05_ssh.sh
-
+ADD scripts/start/init/06_vim.sh /usr/local/docker/start/init/06_vim.sh
