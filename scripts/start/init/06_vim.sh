@@ -13,3 +13,4 @@ if [[ $VIM_SETUP -eq 1 ]]; then
   
 
   success "VIM configured"
+fi
