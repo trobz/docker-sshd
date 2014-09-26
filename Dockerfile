@@ -2,7 +2,7 @@
 # SSH server
 ############################################################
 
-FROM trobz/supervisord:14.04
+FROM trobz/supervisord:12.04
 
 MAINTAINER Michel Meyer <mmeyer@trobz.com>
 
