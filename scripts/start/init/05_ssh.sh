@@ -10,4 +10,6 @@ else
     mkdir $USER_HOME/.ssh && cat /usr/local/ssh/id_rsa.pub >> $USER_HOME/.ssh/authorized_keys 2>/dev/null
 fi
 
+chmod 775 /var/run/screen
+
 success "SSH Server daemon configured"
